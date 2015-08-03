@@ -1,6 +1,6 @@
 var DraggableWindow = new Class({
-	initialize: function (element) {
-		this.containerElement = $(element);
+	initialize: function ( element ) {
+		this.containerElement = $( element );
 		this.makeDraggable();
 	},
 	
@@ -13,7 +13,7 @@ var DraggableWindow = new Class({
 	},
 	
 	toggle: function () {
-		if ('none' !== this.containerElement.getStyle('display')) {
+		if ('none' !== this.containerElement.getStyle( 'display' )) {
 			this.containerElement.hide();
 			return;
 		}
@@ -22,7 +22,7 @@ var DraggableWindow = new Class({
 	},
 	
 	makeDraggable: function () {
-		var handleBarElement = this.containerElement.getFirst('.handle-bar');
+		var handleBarElement = this.containerElement.getFirst( '.handle-bar' );
 		new Drag.Move(this.containerElement, { handle: handleBarElement, snap: 0}).attach();
 		
 	}.protect()

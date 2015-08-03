@@ -1,0 +1,43 @@
+@import "susy";
+
+$absolute-black: #000000;
+$absolute-white: #FFFF61;
+
+body {
+  background-color: $absolute-black;
+  color: $absolute-white;
+}
+
+
+//$main-border-inline-properties: nth($main-border-width, $main-border-color, $main-border-style);
+body {
+  background-color: $absolute-black;
+  color: $absolute-white;
+}
+
+$main-border-color: #FFFFFF;
+$main-border-style: solid;
+$main-border-width: 1px;
+
+
+table {
+  border: $main-border-width $main-border-color $main-border-style;
+  border-collapse: collapse;
+  tr {
+    border: $main-border-width $main-border-color $main-border-style;
+    td {
+      border: $main-border-width $main-border-color $main-border-style;
+    }
+  }
+}
+
+
+// Setting up the Static Grid
+$total-columns: 10;
+$column-width: 4em;
+$gutter-width: 1em;
+$grid-padding: 1em;
+
+$container-style: static;
+
+.static-container { @include container; }

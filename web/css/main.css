@@ -1,0 +1,26 @@
+body {
+  background-color: #000000;
+  color: #FFFF61; }
+
+body {
+  background-color: #000000;
+  color: #FFFF61; }
+
+table {
+  border: 1px #FFFFFF solid;
+  border-collapse: collapse; }
+  table tr {
+    border: 1px #FFFFFF solid; }
+    table tr td {
+      border: 1px #FFFFFF solid; }
+
+.static-container {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto; }
+  .static-container:after {
+    content: " ";
+    display: block;
+    clear: both; }
+
+/*# sourceMappingURL=main.css.map */

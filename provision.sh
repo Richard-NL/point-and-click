@@ -11,4 +11,5 @@ sudo npm install gulp-copy
 sudo npm install gulp-concat
 sudo npm install gulp-watch
 sudo npm install gulp-batch
-
+sudo npm install gulp-sass
+sudo gem install susy

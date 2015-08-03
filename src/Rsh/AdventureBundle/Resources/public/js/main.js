@@ -5,7 +5,6 @@ window.addEvent('domready', function () {
 	
 	$$('#popup-open-link').addEvent('click', function () {
 		gridWindow.toggle();
-		
 	});
 
 });

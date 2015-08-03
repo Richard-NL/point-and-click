@@ -1,0 +1,22 @@
+window.addEvent('domready', function () {
+
+	var myDrag = new Drag.Move('draggable', {
+
+		droppables: '.droppable',
+
+		onDrop: function(element, droppable, event) {
+		    if (droppable) {
+				console.log(element, 'dropped on', droppable.get('text'), 'event', event);
+			}
+		},
+
+		onEnter: function(element, droppable) {
+		    //console.log(element, 'entered', droppable);
+		},
+
+		onLeave: function(element, droppable) {
+		    //console.log(element, 'left', droppable);
+		}
+
+	});
+});
