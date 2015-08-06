@@ -4,23 +4,8 @@ var Inventory = new Class({
     draggableService: new DraggableService(),
 
     initialize: function () {
-//        this.makeItemsDraggable();
         this.createInventoryBoxes();
     },
-//    // @todo remove me
-//    makeItemsDraggable: function () {
-//        var index = 0,
-//            dropZones = $$( '.droppable' ),
-//            draggableItems = $$( '.draggable' );
-//
-//        for ( index = 0; index < draggableItems.length; index += 1 ) {
-//            var dragInstance = this.draggableService.createDragInstance(
-//                draggableItems[index].get( 'id' ),
-//                InventoryBox.NEW_ITEM_DROPPED_EVENT
-//            );
-//            this.dragInstances.push( dragInstance );
-//        }
-//    },
 
     createInventoryBoxes: function () {
         var index = 0,

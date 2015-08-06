@@ -9,165 +9,155 @@
 </head>
 <body>
 <style>
-.grid .item-box {
-	border-style: solid;
-	border-color: black;
-	border-width:1px;
-	height:128px;
-    width: 128px;
-	padding:5px;
-}
-.draggable, .draggable:hover {
-    cursor:move;
-}
-.scene-item {
-    cursor: pointer;
-}
+    .myButton {
+        -moz-box-shadow:inset 0px 34px 0px -15px #b54b3a;
+        -webkit-box-shadow:inset 0px 34px 0px -15px #b54b3a;
+        box-shadow:inset 0px 34px 0px -15px #b54b3a;
+        background-color:#a73f2d;
+        border:1px solid #241d13;
+        display:inline-block;
+        cursor:pointer;
+        color:#ffffff;
+        font-family:Arial;
+        font-size:15px;
+        font-weight:bold;
+        padding:9px 23px;
+        text-decoration:none;
+        text-shadow:0px -1px 0px #7a2a1d;
+    }
+    .myButton:hover {
+        background-color:#b34332;
+    }
+    .myButton:active {
+        position:relative;
+        top:1px;
+    }
+
+    .grid .item-box {
+        border-style: solid;
+        border-color: black;
+        border-width:4px;
+        height:166px;
+        width: 166px;
+        padding:5px;
+        background-color: #ededed;
+    }
+    .draggable, .draggable:hover {
+        cursor:move;
+    }
+    .scene-item {
+        cursor: pointer;
+    }
+    #top-bar {
+        widht: 100%;
+        background-color: black;
+        color:white;
+        padding:5px;
+    }
+
+    #inventory-grid-window {
+        background-color: #383838;
+        z-index: 9999;
+        padding:2px;
+        padding-bottom: 10px;
+    }
+    .handle-bar {
+        background-color: #000000;
+        padding:5px;
+        height:48px;
+        cursor: move;
+    }
+    .close-button-container {
+        float: right;
+        height: 100%;
+        display: block;
+    }
+
 </style>
-<div class="scene-item" data-image-url="images/Banana-icon.png" style="position:absolute;left:300px;background-repeat:no-repeat;width:100px;height:100px;background-image:url('images/Banana-icon.png');color:white;text-align:center" id="banana-item">&nbsp;</div>
-<div class="scene-item" data-image-url="images/lemon-icon.png" style="background-repeat:no-repeat;width:100px;height:100px;background-image:url('images/lemon-icon.png');color:white;text-align:center" id="lemon-item">&nbsp;</div>
+<div id="top-bar"><a href=# class="myButton" id="popup-open-link">Off</a></div>
 
-<div style="position:absolute;top:100px;">
+<div id="inventory-grid-window" style="display:none">
+    <div class="handle-bar">
+        <div class="close-button-container"><a class="myButton" href=#>X</a></div>
+    </div>
+
     <div class="grid grid-pad">
-        <div class="col-1-6">
-           <div class="item-box droppable">
-               
-           </div>
+        <div class="col-1-4">
+            <div class="item-box droppable">
+
+            </div>
         </div>
 
-        <div class="col-1-6">
-           <div class="item-box droppable">
-               
-           </div>
+        <div class="col-1-4">
+            <div class="item-box droppable">
+
+            </div>
         </div>
 
-        <div class="col-1-6">
-           <div class="item-box droppable">
-               
-           </div>
-        </div>
-        <div class="col-1-6">
-           <div class="item-box droppable">
-               
-           </div>
-        </div>
-        <div class="col-1-6">
-           <div class="item-box droppable">
-               
-           </div>
-        </div>
+        <div class="col-1-4">
+            <div class="item-box droppable">
 
-        <div class="col-1-6">
-           <div class="item-box droppable">
-               
-           </div>
+            </div>
+        </div>
+        <div class="col-1-4">
+            <div class="item-box droppable">
+
+            </div>
         </div>
     </div>
     <div class="grid grid-pad">
-        <div class="col-1-6">
-           <div class="item-box droppable">
+        <div class="col-1-4">
+            <div class="item-box droppable">
 
-           </div>
+            </div>
         </div>
 
-        <div class="col-1-6">
-           <div class="item-box droppable">
+        <div class="col-1-4">
+            <div class="item-box droppable">
 
-           </div>
-        </div>
-
-        <div class="col-1-6">
-           <div class="item-box droppable">
-               
-           </div>
-        </div>
-        <div class="col-1-6">
-           <div class="item-box droppable">
-               
-           </div>
-        </div>
-        <div class="col-1-6">
-           <div class="item-box droppable">
-               
-           </div>
+            </div>
         </div>
 
-        <div class="col-1-6">
-           <div class="item-box droppable">
-               
-           </div>
+        <div class="col-1-4">
+            <div class="item-box droppable">
+
+            </div>
+        </div>
+        <div class="col-1-4">
+            <div class="item-box droppable">
+
+            </div>
         </div>
     </div>
     <div class="grid grid-pad">
-        <div class="col-1-6">
-           <div class="item-box droppable">
+        <div class="col-1-4">
+            <div class="item-box droppable">
 
-           </div>
-        </div>
-
-        <div class="col-1-6">
-           <div class="item-box droppable">
-
-           </div>
+            </div>
         </div>
 
-        <div class="col-1-6">
-           <div class="item-box droppable">
-               
-           </div>
-        </div>
-        <div class="col-1-6">
-           <div class="item-box droppable">
-               
-           </div>
-        </div>
-        <div class="col-1-6">
-           <div class="item-box droppable">
-               
-           </div>
+        <div class="col-1-4">
+            <div class="item-box droppable">
+
+            </div>
         </div>
 
-        <div class="col-1-6">
-           <div class="item-box droppable">
-               
-           </div>
-        </div>
-    </div>
-    <div class="grid grid-pad">
-        <div class="col-1-6">
-           <div class="item-box droppable">
+        <div class="col-1-4">
+            <div class="item-box droppable">
 
-           </div>
+            </div>
         </div>
+        <div class="col-1-4">
+            <div class="item-box droppable">
 
-        <div class="col-1-6">
-           <div class="item-box droppable">
-
-           </div>
-        </div>
-
-        <div class="col-1-6">
-           <div class="item-box droppable">
-               
-           </div>
-        </div>
-        <div class="col-1-6">
-           <div class="item-box droppable">
-               
-           </div>
-        </div>
-        <div class="col-1-6">
-           <div class="item-box droppable">
-               
-           </div>
-        </div>
-
-        <div class="col-1-6">
-           <div class="item-box droppable">
-               
-           </div>
+            </div>
         </div>
     </div>
 </div>
+
+<div class="scene-item" data-image-url="images/Banana-icon.png" style="position:absolute;left:300px;background-repeat:no-repeat;width:100px;height:100px;background-image:url('images/Banana-icon.png');color:white;text-align:center" id="banana-item">&nbsp;</div>
+<div class="scene-item" data-image-url="images/lemon-icon.png" style="background-repeat:no-repeat;width:100px;height:100px;background-image:url('images/lemon-icon.png');color:white;text-align:center" id="lemon-item">&nbsp;</div>
+
+
 </body>
 </html>

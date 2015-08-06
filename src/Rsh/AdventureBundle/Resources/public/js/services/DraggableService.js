@@ -14,13 +14,13 @@ var DraggableService = new Class({
             },
 
             onEnter: function ( draggedElement, droppable ) {
-                var myFx = new Fx.Tween( droppable );
-                myFx.start('background-color', '#FFF', '#DDD');
+//                var myFx = new Fx.Tween( droppable );
+//                myFx.start('background-color', '#FFF', '#DDD');
             },
 
             onLeave: function ( draggedElement, droppable ) {
-                var myFx = new Fx.Tween( droppable );
-                myFx.start('background-color', '#DDD', '#FFF');
+//                var myFx = new Fx.Tween( droppable );
+//                myFx.start('background-color', '#DDD', '#FFF');
             }
         });
         return dragInstance;

@@ -1,6 +1,17 @@
 window.addEvent( 'domready', function () {
     var inventory = new Inventory(),
-        scene = new Scene();
+        scene = new Scene(),
+        window = new DraggableWindow('inventory-grid-window'),
+        toggleButton = new ToggleButton($$('#popup-open-link'));
+
+    $$('#popup-open-link').addEvent('click', function () {
+        window.toggle();
+    });
+
+    $$('#inventory-grid-window .myButton').addEvent('click', function () {
+        window.hide();
+        toggleButton.toggle();
+    });
 });
 
 var DraggableService = new Class({
@@ -19,13 +30,13 @@ var DraggableService = new Class({
             },
 
             onEnter: function ( draggedElement, droppable ) {
-                var myFx = new Fx.Tween( droppable );
-                myFx.start('background-color', '#FFF', '#DDD');
+//                var myFx = new Fx.Tween( droppable );
+//                myFx.start('background-color', '#FFF', '#DDD');
             },
 
             onLeave: function ( draggedElement, droppable ) {
-                var myFx = new Fx.Tween( droppable );
-                myFx.start('background-color', '#DDD', '#FFF');
+//                var myFx = new Fx.Tween( droppable );
+//                myFx.start('background-color', '#DDD', '#FFF');
             }
         });
         return dragInstance;
@@ -66,23 +77,8 @@ var Inventory = new Class({
     draggableService: new DraggableService(),
 
     initialize: function () {
-//        this.makeItemsDraggable();
         this.createInventoryBoxes();
     },
-//    // @todo remove me
-//    makeItemsDraggable: function () {
-//        var index = 0,
-//            dropZones = $$( '.droppable' ),
-//            draggableItems = $$( '.draggable' );
-//
-//        for ( index = 0; index < draggableItems.length; index += 1 ) {
-//            var dragInstance = this.draggableService.createDragInstance(
-//                draggableItems[index].get( 'id' ),
-//                InventoryBox.NEW_ITEM_DROPPED_EVENT
-//            );
-//            this.dragInstances.push( dragInstance );
-//        }
-//    },
 
     createInventoryBoxes: function () {
         var index = 0,
