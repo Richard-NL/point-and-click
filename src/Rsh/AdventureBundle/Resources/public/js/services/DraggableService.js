@@ -11,6 +11,12 @@ var DraggableService = new Class({
                     droppable.fireEvent( dropEventName, draggedElement );
                     return;
                 }
+
+                draggedElement.setStyles({
+                    left: null,
+                    top: null
+                });
+                return;
             },
 
             onEnter: function ( draggedElement, droppable ) {
